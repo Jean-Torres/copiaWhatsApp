@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Chats</title>
+</head>
+
+<body style="background-color: #111B21; padding:0; margin: 0;">
+   <!-- Header -->
+   <%- include('../partials/nav-side.ejs') -%>
+      <!-- nav -->
+      <%- include('../partials/header-contacto.ejs') -%>
+
+         <!-- Pestaña de mensajes -->
+         <%- include('../partials/main.ejs') -%>
+
+            <script src="/socket.io/socket.io.js"></script>
+            <script src="./js/chats.js"></script>
+</body>
+
+</html>

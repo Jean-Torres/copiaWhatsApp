@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <title> <%- title -%> </title>
+</head>
+
+<body>
+    <div class="formularioRecover">
+        <h1>Recuperar contraseña</h1>
+
+        <div class="coontenedor">
+            <div class="userName inputs-recover">
+                <span>Usuario</span>
+                <input type="text" name="usuario-rec" id="usuario" placeholder="Nombre de usuario" required>
+            </div>
+            <div class="userName inputs-recover">
+                <span>Correo electronico</span>
+                <input type="email" name="email-rec" id="email" placeholder="ejemplo: julanito@gmail.com" required>
+            </div>
+            <div class="userName inputs-recover">
+                <span>Contraseña antigua</span>
+                <input type="text" name="antPass" id="antPass" placeholder="paswoord" required>
+            </div>
+            <div class="userName inputs-recover">
+                <span>Nueva contraseña</span>
+                <input type="text" name="newPass" id="newPass" placeholder="paswoord" required>
+            </div>
+        </div>
+        <div class="btnsOption">
+            <button id="back">&lt; back</button>
+            <button id="next">next &gt;</button>
+        </div>
+
+    </div>
+    <script src="./js/recover.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title><%- title -%></title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="formularioSesion">
+        <h1>Inicio de sesión</h1>
+        <form method="post" id="login">
+            <div class="coontenedor">
+                <div class="userName">
+                    <span>Usuario</span>
+                    <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario o correo electronico"
+                        required>
+                </div>
+                <div class="userName">
+                    <span>contraseña.</span>
+                    <input type="password" name="contrasenha" id="contrasenha" placeholder="Contraseña" required
+                        aria-required="true">
+                    <!-- pattern="\S{6,}" -->
+                </div>
+                <div class="remember">
+                    <label for="remember"><input type="checkbox" id="remember">Remember password</label>
+                </div>
+                <div class="btnIngresar">
+                    <button type="submit" id="loguearse">Ingresar</button>
+                </div>
+
+                <div class="btnIngresar">
+                    <button type="submit" id="delete">Delete</button>
+                </div>
+            </div>
+
+            <div class="recuperar">
+                <p>¿Olvido su contraseña? <a href="./recover" id="recover">recuperar</a></p>
+            </div>
+
+            <div class="registrarse">
+                <p>Aun no tienes una cuenta. <a href="registrarse">Registrese aquí.</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="./js/validateData.js"></script>
+</body>
+
+</html>

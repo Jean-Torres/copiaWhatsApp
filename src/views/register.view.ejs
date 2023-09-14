@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%-title-%></title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div class="formularioSesion" id="formularioRegistro">
+        <h1>Nueva cuenta.</h1>
+        <form method="post" id="newUser">
+            <div class="coontenedor">
+                <div class="userName">
+                    <span for="">Usuario</span>
+                    <input type="text" name="usuario" id="usuario" placeholder="Cree un usuario" required>
+                </div>
+                <div class="userName">
+                    <span for="">Correo electronico</span>
+                    <input type="email" name="correo" id="correo" placeholder="Correo electronico" required>
+                </div>
+                <div class="userName">
+                    <span for="">contraseña.</span>
+                    <input type="password" name="contrasenha" id="contrasenha" placeholder="Contraseña" required>
+                </div>
+                <div class="userName">
+                    <span for="">validar contraseña.</span>
+                    <input type="password" name="contrasenha2" id="contrasenha2" placeholder="Repita la contraseña"
+                        required>
+                </div>
+                <input type="hidden" name="codigoRolXPermiso" value="64f88b8804c9020c6e196844">
+                <div class="btnIngresar">
+                    <button type="submit" id="btnRegistrarse">Registrarse</button>
+                </div>
+            </div>
+
+            <div class="registrarse">
+                <p>Ya tengo una cuenta. <a href="login">ir al inicio.</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="./js/createUsuarios.js"></script>
+</body>
+
+</html>

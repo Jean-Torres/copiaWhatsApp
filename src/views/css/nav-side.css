@@ -1,0 +1,91 @@
+.content-nav {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    height: 50.6em;
+    border-right: 1px solid gray;
+    background-color: #111B21;
+
+}
+
+.content-nav img {
+    width: 70px;
+    height: 70px;
+    border-radius: 99%;
+    margin: 0 5px;
+}
+
+#mi-foto{
+    width: 60px;
+    height: 60px;
+}
+
+.opciones {
+    display: flex;
+    background-color: #202C33;
+    justify-content: space-between;
+    min-height: 75px;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.opciones img {
+    width: 35px;
+    height: 35px;
+}
+
+.opciones div {
+    display: flex;
+    width: 220px;
+    justify-content: space-around;
+}
+
+.content-contacto {
+    overflow-y: auto;
+}
+
+.contacto {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.datos-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    width: 89%;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    align-items: center;
+    padding: 5px;
+}
+
+.datos-contacto span {
+    color: white;
+    font-size: 18px;
+}
+
+.datos-contacto span:nth-child(1) {
+    width: 85%;
+    display: block;
+    color: white;
+    font-size: 24px;
+}
+
+.datos-contacto span:nth-child(3){
+    max-width: 65%;
+    max-height: 35px;
+}
+
+button {
+    width: 60px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+
+::-webkit-scrollbar{
+    width: 10px;
+}
