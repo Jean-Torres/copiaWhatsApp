@@ -1,28 +1,33 @@
 header{
-    width: 64%;
-    height: 75px;
-    background-color: #202C33;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
+    padding: 0 16px;
 
-    margin-top: -50.62em;
-    margin-left: 551px;
+    display: flex;
+    background-color: #202C33;
+    justify-content: space-between;
+    min-height: 59px;
+    align-items: center;
+
+    margin-top: -39.7em;
+    margin-left: 40.05%;
 }
 
 header img{
-    width: 50px;
-    height: 50px;
+    width: 24px;
+    height: 24px;
     border-radius: 100%;
+}
+
+.content-info img{
+    width: 40px;
+    height: 40px;
 }
 
 .content-info{
     display: flex;
     width: 320px;
-    height: 65px;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
 }
 
 .info-contacto{
@@ -41,13 +46,13 @@ header img{
 
 .info-contacto span:nth-child(1){
     width: 200px;
-    font-size: 22px;
+    font-size: 16px;
 }
 
 .info-contacto span:nth-child(2){
     max-width: 180px;
-    font-size: 18px;
-    font-family: cursive;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .opciones-chats {

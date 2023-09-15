@@ -1,3 +1,6 @@
+import encriptar from './ecrypt.password.js';
+const escript = new encriptar();
+
 async function crearUsuario(url, data) {
     const res = await fetch(url, {
         method: "POST",
@@ -14,16 +17,16 @@ async function crearUsuario(url, data) {
 
 document.querySelector('#newUser').addEventListener('submit', (e) => {
     e.preventDefault();
-    data = {
+    const data = {
         usuario: usuario.value,
-        contrasenha: contrasenha.value,
+        contrasenha: escript.encriptarTexto(contrasenha.value),
         correo: correo.value,
         codigoRolXPermiso: '64f88b8804c9020c6e196844'
     }
     crearUsuario('https://node-desploy-apistore.onrender.com/api/usuarioSesion', data);
     usuario.value = ""
     contrasenha.value = ""
-    correo.value = "" 
-    document.querySelector('#contrasenha2').value=""
+    correo.value = ""
+    document.querySelector('#contrasenha2').value = ""
     alert('Usuario creado correctamente.')
 })

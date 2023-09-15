@@ -1,37 +1,34 @@
 .content-nav {
     display: flex;
     flex-direction: column;
-    width: 550px;
-    height: 50.6em;
-    border-right: 1px solid gray;
+    width: 40%;
+    height: 39.7em;
+    border-right: 0.2px solid gray;
     background-color: #111B21;
-
 }
 
 .content-nav img {
-    width: 70px;
-    height: 70px;
     border-radius: 99%;
     margin: 0 5px;
 }
 
 #mi-foto{
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
 }
 
 .opciones {
     display: flex;
     background-color: #202C33;
     justify-content: space-between;
-    min-height: 75px;
+    min-height: 59px;
     align-items: center;
-    padding-left: 10px;
+    padding: 0 10px 0 10px ;
 }
 
 .opciones img {
-    width: 35px;
-    height: 35px;
+    width: 24px;
+    height: 24px;
 }
 
 .opciones div {
@@ -39,6 +36,8 @@
     width: 220px;
     justify-content: space-around;
 }
+
+/* Panel de contactos */
 
 .content-contacto {
     overflow-y: auto;
@@ -56,26 +55,32 @@
     flex-wrap: wrap;
     width: 89%;
     justify-content: space-between;
-    border-bottom: 1px solid white;
+    border-bottom: 0.5px solid rgb(76, 76, 76);
     align-items: center;
     padding: 5px;
 }
 
 .datos-contacto span {
     color: white;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .datos-contacto span:nth-child(1) {
     width: 85%;
     display: block;
     color: white;
-    font-size: 24px;
 }
 
 .datos-contacto span:nth-child(3){
     max-width: 65%;
     max-height: 35px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.content-contacto  img{
+    width: 49px;
+    height: 49px;
 }
 
 button {
@@ -84,7 +89,6 @@ button {
     border: 0;
     cursor: pointer;
 }
-
 
 ::-webkit-scrollbar{
     width: 10px;

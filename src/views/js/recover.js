@@ -1,5 +1,7 @@
-let page = 0;
+import encriptar from './ecrypt.password.js';
+const escript = new encriptar();
 
+let page = 0;
 const inputs = document.querySelectorAll('.inputs-recover')
 
 const cerrarVistas = () => {
@@ -39,8 +41,8 @@ document.querySelector('#next').addEventListener('click', () => {
         if (page == 3) {
             const data = {
                 usuario: document.querySelector('#usuario').value,
-                contrasenha: document.querySelector('#antPass').value,
-                newContrasenha: document.querySelector('#newPass').value
+                contrasenha: escript.encriptarTexto(document.querySelector('#antPass').value),
+                newContrasenha: escript.encriptarTexto(document.querySelector('#newPass').value)
             };
             enviar('https://node-desploy-apistore.onrender.com/api/usuarioSesion', data);
             alert('Contrasenha actualizada.')

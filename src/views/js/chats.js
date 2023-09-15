@@ -9,7 +9,6 @@ message.addEventListener('input', () => {
     if (message.value.length > 0) {
         btnEnviar.style.display = 'block'
         document.querySelector('#grabarAudio').style.display = 'none'
-
     } else {
         document.querySelector('#grabarAudio').style.display = 'block'
         btnEnviar.style.display = 'none'
@@ -26,6 +25,8 @@ btnEnviar.addEventListener('click', () => {
     }
     socket.emit('chat', data)
     message.value = '';
+    document.querySelector('#grabarAudio').style.display = 'block'
+    btnEnviar.style.display = 'none'
 })
 
 message.addEventListener('keypress', () => {

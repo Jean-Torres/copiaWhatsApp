@@ -1,8 +1,8 @@
 main {
-    width: 65%;
-    height: 45.5em;
+    width: 59.1%;
+    height: 36.4em;
 
-    margin-left: 550px;
+    margin-left: 40.05%;
 }
 
 .content-chats {
@@ -10,12 +10,11 @@ main {
     height: 88%;
     padding-left: 10px;
     padding-top: 10px;
-    /* background-color: #0B141A; */
     background-image:linear-gradient(
         to bottom,
-        rgba(132, 132, 132, 0.5),
-        rgba(78, 78, 78, 0.5)
-      ), url('../img/fondoWhatsapp.jpg');
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0)
+      ), url('../img/fondoWhatsapp2.jpg');
     overflow-y: scroll;
 }
 
@@ -59,26 +58,33 @@ main {
 }
 
 .contebt-entradas {
-    width: 100%;
-    height: 70px;
+    width: 96.5%;
+    height: 45px;
     background-color: #202C33;
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
+    padding: 5px 16px;
 }
 
 .contebt-entradas button {
-    width: 60px;
+    width: 40px;
+    height: 40px;
     background: none;
+    padding: 5px 0;
     border: 0;
     cursor: pointer;
 }
 
+button img{
+    width: 24px;
+    height: 24px;
+}
+
 .contebt-entradas input {
     width: 75%;
-    font-size: 20px;
+    font-size: 16px;
     color: white;
-    padding: 10px;
+    padding: 10px 12px;
     background-color: #2A3942;
     border-radius: 10px;
     border: 0;

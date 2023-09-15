@@ -1,3 +1,7 @@
+import encriptar from './ecrypt.password.js';
+const escript = new encriptar();
+
+
 let contador = 0, usuarioFinal, contrasenhaFinal;
 
 document.querySelector('#login').addEventListener('submit', (e) => {
@@ -6,7 +10,7 @@ document.querySelector('#login').addEventListener('submit', (e) => {
 
 document.querySelector('#loguearse').addEventListener('click', () => {
     usuarioFinal = document.querySelector('#usuario').value;
-    contrasenhaFinal = document.querySelector('#contrasenha').value;
+    contrasenhaFinal = escript.encriptarTexto(document.querySelector('#contrasenha').value);
     const url1 = `https://node-desploy-apistore.onrender.com/api/usuarioSesion/userOne?usuario=${usuarioFinal}&contrasenha=${contrasenhaFinal}`
     fetch(url1, {
         method: 'Get',
@@ -23,7 +27,7 @@ document.querySelector('#loguearse').addEventListener('click', () => {
             if (dataRes != null) {
                 usuario.value = ""
                 contrasenha.value = ""
-                alert('Usuario logueado correctamente.')
+                location.href= "/chats"
             } else {
                 alert("Usuario o contraseña incorrecta.")
             }
@@ -36,7 +40,7 @@ document.querySelector('#loguearse').addEventListener('click', () => {
 document.querySelector('#delete').addEventListener('click', () => {
     const data = {
         usuario: document.querySelector('#usuario').value,
-        contrasenha: document.querySelector('#contrasenha').value
+        contrasenha: escript.encriptarTexto(document.querySelector('#contrasenha').value)
     }
     const url2 = `https://node-desploy-apistore.onrender.com/api/usuarioSesion?usuario=${data.usuario}&contrasenha=${data.contrasenha}`
     fetch(url2, {
