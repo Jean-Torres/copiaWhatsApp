@@ -11,27 +11,27 @@ document.querySelector('#login').addEventListener('submit', (e) => {
 document.querySelector('#loguearse').addEventListener('click', () => {
     usuarioFinal = document.querySelector('#usuario').value;
     contrasenhaFinal = escript.encriptarTexto(document.querySelector('#contrasenha').value);
-    const url1 = `https://node-desploy-apistore.onrender.com/api/usuarioSesion/userOne?usuario=${usuarioFinal}&contrasenha=${contrasenhaFinal}`
-    fetch(url1, {
+    console.log(contrasenhaFinal + " " + usuarioFinal)
+    const url = `https://node-desploy-apistore.onrender.com/api/usuarioSesion/userOne?usuario=${usuarioFinal}&contrasenha=${contrasenhaFinal}`
+    fetch(url, {
         method: 'Get',
         mode: 'cors',
-        headers: { "content-type": "aplication/json; charset=utf8" }
+        headers: { "content-type": "application/json; charset=utf8" }
     })
-        .then(res => {
-            if (!res.ok) {
-                throw new Error('error')
+        .then(respuesta => {
+            if (respuesta.ok == null) {
+                throw new Error("Error");
             }
-            return res.json();
+            return respuesta.json()
         })
-        .then(dataRes => {
-            if (dataRes != null) {
-                usuario.value = ""
-                contrasenha.value = ""
-                location.href= "/chats"
+        .then(respuesta => {
+            if (respuesta != null) {
+                location.href = "/chats"
             } else {
-                alert("Usuario o contraseña incorrecta.")
+                alert("Usuario o contraseña erronea")
             }
         })
+
         .catch(err => {
             console.error(err);
         })
@@ -42,8 +42,8 @@ document.querySelector('#delete').addEventListener('click', () => {
         usuario: document.querySelector('#usuario').value,
         contrasenha: escript.encriptarTexto(document.querySelector('#contrasenha').value)
     }
-    const url2 = `https://node-desploy-apistore.onrender.com/api/usuarioSesion?usuario=${data.usuario}&contrasenha=${data.contrasenha}`
-    fetch(url2, {
+    const url = `https://node-desploy-apistore.onrender.com/api/usuarioSesion?usuario=${data.usuario}&contrasenha=${data.contrasenha}`
+    fetch(url, {
         method: 'DELETE',
         mode: "cors",
         cache: "no-cache",
